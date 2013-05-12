@@ -12,6 +12,7 @@ import javax.persistence.PersistenceContext;
 public class BikeTicketService {
     @PersistenceContext
     EntityManager em;
+    
     public void createCyclist( String userName, String emailAdress){
         System.out.println("Username/emailadress=" + userName + "/" + emailAdress);
         em.persist(new Cyclist(userName,emailAdress));
